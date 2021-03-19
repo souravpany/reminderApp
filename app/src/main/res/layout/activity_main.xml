@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinator_l"
+    tools:context=".ui.MainActivity">
+
+
+    <DatePicker
+        android:id="@+id/date_p"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <com.android.own.reminderapp.dateandtimepicker.TimePickerCustom
+        android:id="@+id/time_p"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@+id/date_p"
+        android:timePickerMode="spinner"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_p" />
+
+    <Button
+        android:id="@+id/btnRemindMe"
+        android:layout_width="260dp"
+        android:layout_height="81dp"
+        android:text="@string/remind_me"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_p" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
